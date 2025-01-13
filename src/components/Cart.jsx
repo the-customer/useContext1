@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Trash2, Plus, Minus } from 'lucide-react';
+import { useCart } from '../context/CardContext';
 
 export function Cart() {
-  const items = [];
-  function removeItem() {}
-  function updateQuantity() {}
-  const getTotal = () => 0;
+
+
+
+  const {items,removeItem,updateQuantity,getTotal} = useCart()
+
   
   if (items.length === 0) {
     return (

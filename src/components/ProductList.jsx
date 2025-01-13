@@ -1,4 +1,5 @@
 import React from 'react';
+import { useCart } from '../context/CardContext';
 
 const products = [
   { id: 1, name: 'Laptop', price: 999.99 },
@@ -7,8 +8,7 @@ const products = [
 ];
 
 export function ProductList() {
-  // const { addItem } = useCart();
-  function addItem(product){}
+  const {addItem}  = useCart();
   
   return (
     <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
